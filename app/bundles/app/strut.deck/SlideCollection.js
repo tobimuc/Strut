@@ -50,7 +50,8 @@ define(["common/Calcium", "./Slide"],
 			 * @returns {SlideCollection} this
 			 */
 			slidesReorganized: function(slidesCopy) {
-				var transitions = [];
+			//Do not change the position, transition when the slide order is changed:
+			/**	var transitions = [];
 				this.models.forEach(function(model, i) {
 					transitions.push(slidesCopy[i].getPositionData());
 				}, this);
@@ -59,6 +60,7 @@ define(["common/Calcium", "./Slide"],
 				transitions.forEach(function(transition, i) {
 					this.models[i].set(transition, silent);
 				}, this);
+				*/
 
 				this.models.forEach(function(model, i) {
 					model.set('index', i);
